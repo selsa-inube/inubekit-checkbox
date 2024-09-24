@@ -13,12 +13,12 @@ import { ThemeContext } from "styled-components";
 import { tokens } from "./Tokens/tokens";
 
 interface ICheckbox {
-  id: string;
+  id?: string;
   name?: string;
   value: string;
   checked?: boolean;
   indeterminate?: boolean;
-  label: string;
+  label?: string;
   disabled?: boolean;
   required?: boolean;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -26,7 +26,7 @@ interface ICheckbox {
 
 const Checkbox = (props: ICheckbox) => {
   const {
-    id,
+    id="checkbox",
     name,
     value,
     checked = false,
