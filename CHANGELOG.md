@@ -1,3 +1,15 @@
+# v0.2.2 (Tue Sep 24 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Update index.tsx ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v0.2.1 (Tue Sep 24 2024)
 
 #### ⚠️ Pushed to `main`
