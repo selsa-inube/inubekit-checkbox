@@ -8,9 +8,9 @@ import {
   StyledPreventSelectableLabel,
   StyledSpan,
 } from "./styles";
-import { inube } from "@inubekit/foundations";
 import { useContext } from "react";
 import { ThemeContext } from "styled-components";
+import { tokens } from "./Tokens/tokens";
 
 interface ICheckbox {
   id: string;
@@ -37,16 +37,14 @@ const Checkbox = (props: ICheckbox) => {
     onChange,
   } = props;
 
-  const theme: typeof inube = useContext(ThemeContext);
+  const theme = useContext(ThemeContext) as { checkbox: typeof tokens };
   const disabledAppearance =
-    theme?.checkbox?.vector?.color?.disabled ||
-    inube.checkbox.vector.color.disabled;
+    theme?.checkbox?.vector?.color?.disabled || tokens.vector.color.disabled;
   const indeterminateAppearance =
     theme?.checkbox?.vector?.color?.indeterminate ||
-    inube.checkbox.vector.color.indeterminate;
+    tokens.vector.color.indeterminate;
   const checkedAppearance =
-    theme?.checkbox?.vector?.color?.checked ||
-    inube.checkbox.vector.color.checked;
+    theme?.checkbox?.vector?.color?.checked || tokens.vector.color.checked;
 
   return (
     <Stack direction="row" alignItems="center" gap="10px" width="fit-content">
