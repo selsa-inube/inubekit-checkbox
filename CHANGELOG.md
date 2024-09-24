@@ -1,3 +1,15 @@
+# v0.2.0 (Tue Sep 24 2024)
+
+#### 🚀 Enhancement
+
+- Move checkbox tokens from foundations to component [#2](https://github.com/selsa-inube/inubekit-checkbox/pull/2) ([@cmarin001](https://github.com/cmarin001))
+
+#### Authors: 1
+
+- Cesar Marin Alfonso ([@cmarin001](https://github.com/cmarin001))
+
+---
+
 # v0.1.1 (Tue Sep 03 2024)
 
 #### 🐛 Bug Fix
