@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { inube } from "@inubekit/foundations";
+import { tokens } from "./Tokens/tokens";
 
 const StyledCheckbox = styled.input`
   opacity: 0;
@@ -8,28 +8,25 @@ const StyledCheckbox = styled.input`
 
   &:checked + span {
     border-color: ${({ theme }) =>
-      theme?.checkbox?.border?.color?.checked ||
-      inube.checkbox.border.color.checked};
+      theme?.checkbox?.border?.color?.checked || tokens.border.color.checked};
     background-color: ${({ theme }) =>
       theme?.checkbox?.background?.color?.checked ||
-      inube.checkbox.background.color.checked};
+      tokens.background.color.checked};
   }
 
   &:focus + span {
     outline: 2px solid
       ${({ theme }) =>
-        theme?.checkbox?.vector?.color?.hover ||
-        inube.checkbox.vector.color.hover};
+        theme?.checkbox?.outline?.color?.hover || tokens.outline.color.hover};
     outline-offset: 2px;
   }
 
   &:disabled + span {
     border-color: ${({ theme }) =>
-      theme?.checkbox?.border?.color?.disabled ||
-      inube.checkbox.border.color.disabled};
+      theme?.checkbox?.border?.color?.disabled || tokens.border.color.disabled};
     background-color: ${({ theme }) =>
       theme?.checkbox?.background?.color?.disabled ||
-      inube.checkbox.background.color.disabled};
+      tokens.background.color.disabled};
   }
 `;
 
@@ -41,16 +38,14 @@ const StyledSpan = styled.span`
   border: 2px solid
     ${({ theme, checked, $indeterminate }) =>
       checked || $indeterminate
-        ? theme?.checkbox?.border?.color?.checked ||
-          inube.checkbox.border.color.checked
-        : theme?.checkbox?.border?.color?.active ||
-          inube.checkbox.border.color.active};
+        ? theme?.checkbox?.border?.color?.checked || tokens.border.color.checked
+        : theme?.checkbox?.border?.color?.active || tokens.border.color.active};
   background-color: ${({ theme, checked, $indeterminate }) =>
     checked || $indeterminate
       ? theme?.checkbox?.background?.color?.checked ||
-        inube.checkbox.background.color.checked
+        tokens.background.color.checked
       : theme?.checkbox?.background?.color?.active ||
-        inube.checkbox.background.color.active};
+        tokens.background.color.active};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 
   display: flex;
@@ -60,8 +55,8 @@ const StyledSpan = styled.span`
   ${({ disabled }) =>
     disabled &&
     `
-    border-color: ${inube.checkbox.border.color.disabled};
-    background-color: ${inube.checkbox.background.color.disabled};
+    border-color: ${tokens.border.color.disabled};
+    background-color: ${tokens.background.color.disabled};
   `}
 `;
 
